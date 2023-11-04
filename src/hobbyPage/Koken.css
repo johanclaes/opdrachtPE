@@ -1,0 +1,17 @@
+.wrapper {
+    background-color: blueviolet;
+}
+
+.title {
+
+}
+
+.item {
+    background-color: aquamarine;
+
+}
+
+.maximumBreedte{
+
+    max-width: 500px;
+}
