@@ -8,6 +8,7 @@ import Navigation from './routing/navigation.tsx'
 
 
 
+
 interface AppProps {
 
 }
@@ -17,8 +18,8 @@ const App: FunctionComponent<AppProps> = () => {
 
     return (
         <BrowserRouter>
-            <Navigation/>
-            <Routing/>
+                <Navigation/>
+                <Routing/>
         </BrowserRouter>
     )
 }

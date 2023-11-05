@@ -1,20 +1,23 @@
-import {FunctionComponent} from 'react'
+import {FunctionComponent } from 'react'
 import HowDoYouFeel from './HowDoYouFeel.tsx'
-
 import Testimonials from './Testimonials.tsx'
 import DifferentTechnology from './DifferentTechnology.tsx'
-import Testing from './Testing.tsx'
-import userContext5 from './Testing.tsx'
+
+import { useContext} from 'react'
+
+import {AchtergrondKleur} from './HowDoYouFeel.tsx'
 
 
-interface ErvaringProps {
-
-}
+interface ErvaringProps {}
 
 const Ervaring: FunctionComponent<ErvaringProps> = () => {
+
+    const achtergrondkleur = useContext(AchtergrondKleur)
+
     return (
         <>
-            <userContext5.Provider value="abc">
+
+            <div style={{backgroundColor: achtergrondkleur}}>
                 <br/>
                 <h2>Ervaring</h2>
                 <br/>
@@ -22,10 +25,11 @@ const Ervaring: FunctionComponent<ErvaringProps> = () => {
                 <br/>
                 <Testimonials/>
                 <br/>
-                {/*<HowDoYouFeel/>*/}
+                <HowDoYouFeel/>
                 <br/>
-                <Testing/>
-            </userContext5.Provider>
+
+            </div>
+
 
         </>
     )

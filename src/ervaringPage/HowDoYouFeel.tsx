@@ -1,29 +1,18 @@
-import {FunctionComponent, useContext, createContext} from 'react'
-import { Flex, Button } from '@mantine/core';
-import './HowDoYouFeel.css';
+import {FunctionComponent, createContext } from 'react'
+import { Flex} from '@mantine/core';
+
+import ShowModal from './ShowModal.tsx'
 
 
-import {PiBatteryEmpty} from 'react-icons/Pi'
-import {RiRainyFill} from 'react-icons/Ri'
-import {AiOutlineHeart} from 'react-icons/Ai'
-import {SlEnergy} from 'react-icons/Sl'
-import {ThemeContext} from 'styled-components'
-
+export const AchtergrondKleur = createContext("bisque")
 
 interface HowDoYouFeelProps {
 }
 
 const HowDoYouFeel: FunctionComponent<HowDoYouFeelProps> = () => {
-    const theme = useContext(ThemeContext)
 
     return (
         <>
-            <ThemeContext.Provider value="abc">
-                <h5>THEMAPROVIDER</h5>
-            </ThemeContext.Provider>
-
-
-            <h5>Change the background</h5>
             <Flex
                 mih={100}
                 bg="purple"
@@ -34,30 +23,20 @@ const HowDoYouFeel: FunctionComponent<HowDoYouFeelProps> = () => {
                 wrap="wrap"
             >
                 <h3>How do You Feel ? </h3>
-                <Button className="knop1"><PiBatteryEmpty/>   Slowly Empty...</Button>
-                <Button className="knop2"><RiRainyFill/>   Rainy Cool Down</Button>
-                <Button className="knop3"><AiOutlineHeart/>   Flower Power</Button>
-                <Button className="knop4"><SlEnergy/>   Can Do ! </Button>
 
+
+                <ShowModal boodschap={"Neem een cola uit de koelkast!"} titel={"Slowly Empty"} 
+                            achtergrondkleur={"light"} icoon={"batteryempty"}/>
+                <ShowModal boodschap={"Na regen komt er .. "} titel={"Rainy Cool Down"}
+                            achtergrondkleur={"primary"} icoon={"rainiefill"}/>
+                <ShowModal boodschap={"Tijd voor een goed gesprek "} titel={"Flower Power"}
+                            achtergrondkleur={"warning"} icoon={"outlineheart"}/>
+                <ShowModal boodschap={"Tijd om resultaten te boeken"} titel={"Can Do"}
+                            achtergrondkleur={"success"} icoon={"energy"}/>
             </Flex>
-
         </>
-
-
     )
 }
 
 export default HowDoYouFeel
 
-
-
-export type GlobalContent = {
-        copy: string
-        setCopy: (c: string) => void
-    }
-    export const MyGlobalContext = createContext<GlobalContent>({
-        copy: 'Hello World',
-        setCopy: () => {
-        }
-    })
-    export const useGlobalContext = () => useContext(MyGlobalContext)

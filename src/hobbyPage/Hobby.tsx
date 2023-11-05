@@ -3,20 +3,26 @@ import Expo from './Expo.tsx'
 import Fietsen from './Fietsen.tsx'
 import Koken from './Koken.tsx'
 
-interface HobbyProps {
+import { useContext} from 'react'
+import {AchtergrondKleur} from '../ervaringPage/HowDoYouFeel.tsx'
 
-}
+interface HobbyProps {}
 
 const Hobby: FunctionComponent<HobbyProps> = () => {
 
+
+    const achtergrondkleur = useContext(AchtergrondKleur)
     return (
         <>
-            <br/>
-            <Expo/>
-            <hr/>
-            <Koken/>
-            <hr/>
-            <Fietsen/>
+            <div style={{backgroundColor: achtergrondkleur}}>
+                <br/>
+                <Expo/>
+                <hr/>
+                <Koken/>
+                <hr/>
+                <Fietsen/>
+            </div>
+
         </>
     )
 }
