@@ -11,16 +11,19 @@ interface KokenFotosProps {
 const KokenFotos: FunctionComponent<KokenFotosProps> = () => {
     return (
         <>
-            <Carousel withIndicators
-                      height={250}
-                      slideSize="100%"
-                      slideGap="md"
-                      loop
-                      align="start"
-                      slidesToScroll={1}>
+            <Carousel
+                withIndicators
+                height={250}
+                slideSize="95%"
+                slideGap="lg"
+                loop
+                align="start"
+                slidesToScroll={1}
+            >
                 <Carousel.Slide><img alt="foto-chili" src={fotochiliconcarne} className="img-fluid" /></Carousel.Slide>
                 <Carousel.Slide><img alt="foto-appel" src={fotoappelcrumble} className="img-fluid" /></Carousel.Slide>
                 <Carousel.Slide><img alt="foto-focaccia" src={fotoFocaccia} className="img-fluid" /></Carousel.Slide>
+
             </Carousel>
         </>
     )
