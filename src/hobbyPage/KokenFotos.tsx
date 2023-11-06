@@ -14,7 +14,7 @@ const KokenFotos: FunctionComponent<KokenFotosProps> = () => {
             <Carousel
                 withIndicators
                 height={250}
-                slideSize="95%"
+                slideSize="99%"
                 slideGap="lg"
                 loop
                 align="start"
