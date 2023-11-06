@@ -36,7 +36,7 @@ const Fietsen: FunctionComponent<FietsenProps> = () => {
                             dan verkoop ik hem. Links een lijst van mijn fietsen en onder een filmke.
                         </p>
                         <iframe
-                            src="../../public/2023mijn_fietsen.mp4"
+                            src="/2023mijn_fietsen.mp4"
                             title="YouTube video player"
                             style={{ border: 0 }}
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

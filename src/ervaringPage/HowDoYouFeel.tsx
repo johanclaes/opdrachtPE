@@ -1,7 +1,7 @@
 import {FunctionComponent, createContext } from 'react'
 import { Flex} from '@mantine/core';
 
-import ShowModal from './ShowModal.tsx'
+import ShowModalMantine from './ShowModalMantine.tsx'
 
 
 export const AchtergrondKleur = createContext("bisque")
@@ -24,15 +24,11 @@ const HowDoYouFeel: FunctionComponent<HowDoYouFeelProps> = () => {
             >
                 <h3>How do You Feel ? </h3>
 
+                <ShowModalMantine boodschap={"Neem een cola uit de koelkast!"} titel={"Slowly Empty"} achtergrondkleur={"grey"} icoon={"batteryempty"}/>
+                <ShowModalMantine boodschap={"Na regen komt er .. "} titel={"Rainy Cool Down"} achtergrondkleur={"bluegreen"} icoon={"rainiefill"}/>
+                <ShowModalMantine boodschap={"Tijd voor een goed gesprek..."} titel={"Flower Power"} achtergrondkleur={"violet"} icoon={"outlineheart"}/>
+                <ShowModalMantine boodschap={"Tijd om resultaten te boeken"} titel={"Can Do !"} achtergrondkleur={"green"} icoon={"energy"}/>
 
-                <ShowModal boodschap={"Neem een cola uit de koelkast!"} titel={"Slowly Empty"} 
-                            achtergrondkleur={"light"} icoon={"batteryempty"}/>
-                <ShowModal boodschap={"Na regen komt er .. "} titel={"Rainy Cool Down"}
-                            achtergrondkleur={"primary"} icoon={"rainiefill"}/>
-                <ShowModal boodschap={"Tijd voor een goed gesprek "} titel={"Flower Power"}
-                            achtergrondkleur={"warning"} icoon={"outlineheart"}/>
-                <ShowModal boodschap={"Tijd om resultaten te boeken"} titel={"Can Do"}
-                            achtergrondkleur={"success"} icoon={"energy"}/>
             </Flex>
         </>
     )
