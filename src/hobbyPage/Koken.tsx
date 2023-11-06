@@ -6,7 +6,7 @@ import KokenFotos from './KokenFotos.tsx'
 
 
 const chileconcarne =
-    'Snipper de uien en de knoflook. Snij de paprika in blokjes.\n' +
+    'Snipper de uien en de knoflook. Snij de paprikas in blokjes.\n' +
     'Bak het gehakt rul in 2 el olijfolie. Voeg er na 10 minuten de ui en knoflook, de paprikablokjes en de tomatenblokjes. Kruid met wat zout, komijn, korianderpoeder, 1 mespunt kaneel en 1 mespunt of meer chilipoeder.\n' +
     'Voeg 3 dl water toe, breng aan de kook en laat 2 uur zachtjes sudderen.\n' +
     'Laat de bonen uitlekken en doe ze bij de saus. Laat nog 10 minuten op een zacht vuurtje doorwarmen. Breng op smaak met peper en zout.';
