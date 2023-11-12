@@ -2,22 +2,19 @@ import {FunctionComponent } from 'react'
 import HowDoYouFeel from './HowDoYouFeel.tsx'
 import Testimonials from './Testimonials.tsx'
 import DifferentTechnology from './DifferentTechnology.tsx'
-
 import { useContext} from 'react'
-
-import {AchtergrondKleur} from './HowDoYouFeel.tsx'
+import VeranderKleur from './VeranderKleur.tsx'
+import AchtergrondContext from '../routing/AchtergrondContext.tsx'
 
 
 interface ErvaringProps {}
 
 const Ervaring: FunctionComponent<ErvaringProps> = () => {
-
-    const achtergrondkleur = useContext(AchtergrondKleur)
-
+    const achtergrond = useContext(AchtergrondContext)
     return (
         <>
 
-            <div style={{backgroundColor: achtergrondkleur}}>
+            <div style={{backgroundColor: achtergrond.activeKleur}}>
                 <br/>
                 <h2>Ervaring</h2>
                 <br/>
@@ -27,6 +24,7 @@ const Ervaring: FunctionComponent<ErvaringProps> = () => {
                 <br/>
                 <HowDoYouFeel/>
                 <br/>
+                <VeranderKleur/>
 
             </div>
 

@@ -8,17 +8,18 @@ import Certificaten from './Certificaten.tsx'
 import TaalProgressie from './TaalProgressie.tsx'
 
 import { useContext} from 'react'
-import {ThemeContext} from '../ervaringPage/ThemeContext.tsx'
+import AchtergrondContext from '../routing/AchtergrondContext.tsx'
 interface HomeProps {
 
 }
 
 const Home: FunctionComponent<HomeProps> = () => {
-    const theme = useContext(ThemeContext)
+
+    const achtergrond = useContext(AchtergrondContext)
     return (
         <>
             <br/><br/>
-            <Container fluid="md" style={{backgroundColor: theme.rainyCoolDown.main}}>
+            <Container fluid="md" style={{backgroundColor: achtergrond.activeKleur}}>
                 <Row>
                     <Col><MenuBlok titel={"Opleidingen"}
                                    beschrijving={"Dit is een overzicht van mijn schoolse opleidingen. Opleidingen die ik ooit voor proximus moest of mocht volgen, zouden ons te ver leiden."}
